@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .header-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+header .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header .header-text h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+header .header-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+
+nav {
+    background-color: #DFD3C3;
+    padding: 25px;
+    border-radius: 20px;
+    overflow-y: auto;
+    margin: 10px;
+    max-width: 250px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+nav ul li a {
+    display: flex;
+    padding: 10px;
+    border-radius: 4px;
+    color: black;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+article {
+    flex: 2;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    max-height: calc(100vh - 110px);
+    box-sizing: border-box;
+}
+
+article h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+aside {
+    font-family: "Rowdies", sans-serif;
+    grid-column: 3 / 4;
+    background-color: #DFD3C3;
+    padding: 10px;
+    color: black;
+    border-radius: 20px;
+    margin: 10px;
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+aside h2 {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+aside ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+
+footer {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 15px 20px;
+    border-top: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer .socials, footer .copyright, footer .footer-name {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer .socials p, footer .footer-name p {
+    margin: 0;
+    padding: 2px 0;
+}
+
+footer .socials {
+    text-align: left;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer .footer-name {
+    text-align: right;
+}
+
+
+form {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+form table {
+    width: 100%;
+}
+
+form td {
+    padding: 15px;
+}
+
+form input[type="text"],
+form input[type="file"],
+form input[type="date"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+.tblLowongan, .tblPengumuman, .tblForm {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tblLowongan thead, .tblPengumuman thead, .tblForm thead {
+    background-color: #DFD3C3;
+    color: #000;
+    font-weight: bold;
+}
+
+.tblLowongan thead th, .tblPengumuman thead th, .tblForm thead th {
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    text-transform: uppercase;
+}
+
+.tblLowongan tbody tr:nth-child(even), 
+.tblPengumuman tbody tr:nth-child(even), 
+.tblForm tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tblLowongan tbody tr:hover, 
+.tblPengumuman tbody tr:hover, 
+.tblForm tbody tr:hover {
+    background-color: #e8e8e8;
+}
+
+.tblLowongan td, 
+.tblPengumuman td, 
+.tblForm td,
+.tblLowongan th,
+.tblPengumuman th,
+.tblForm th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.tblLowongan .btn-ubah, 
+.tblPengumuman .btn-ubah, 
+.btn-ubah {
+    background-color: #4CAF50;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tblLowongan .btn-ubah:hover, 
+.tblPengumuman .btn-ubah:hover, 
+.btn-ubah:hover {
+    background-color: #45a049;
+}
+
+.tblLowongan .btn-hapus, 
+.tblPengumuman .btn-hapus, 
+.btn-hapus {
+    background-color: #f44336;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tblLowongan .btn-hapus:hover, 
+.tblPengumuman .btn-hapus:hover, 
+.btn-hapus:hover {
+    background-color: #e53935;
+}
+
+h2 {
+    text-align: center; 
+    margin: 20px 0;
+}
+
+
+
+@media (max-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "nav article"
+            "aside aside";
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+    }
+
+    nav {
+        grid-area: nav;
+        max-width: 250%;
+    }
+
+    article {
+        grid-area: article;
+    }
+
+    aside {
+        grid-area: aside;
+        max-width: 250%;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        display: block;
+    }
+
+    header, footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    main {
+        display: block;
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    aside {
+        display: block;
+        padding: 10px;
+    }
+}
